@@ -24,11 +24,11 @@ public class TwoSumDemo {
         System.out.println("result1: "+result1[1]);
 
 
-        int[] result2 = twoSum1(nums, target);
+        int[] result2 = twoSum2(nums, target);
         System.out.println("result2: "+result2[0]);
         System.out.println("result2: "+result2[1]);
 
-        int[] result3 = twoSum1(nums, target);
+        int[] result3 = twoSum3(nums, target);
         System.out.println("result3: "+result3[0]);
         System.out.println("result3: "+result3[1]);
 
@@ -90,7 +90,7 @@ public class TwoSumDemo {
         for(int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
             if(map.containsKey(complement)) {
-                return new int[]{i, map.get(complement)};
+                return new int[]{map.get(complement), i};
             }
             map.put(nums[i], i);
         }
