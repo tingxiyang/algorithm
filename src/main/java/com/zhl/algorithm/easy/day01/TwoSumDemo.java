@@ -2,6 +2,8 @@ package com.zhl.algorithm.easy.day01;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Created by zhl on 18/9/26 下午3:08.
@@ -93,6 +95,7 @@ public class TwoSumDemo {
                 return new int[]{map.get(complement), i};
             }
             map.put(nums[i], i);
+
         }
         throw new IllegalArgumentException("No two sum solution");
     }
